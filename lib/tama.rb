@@ -1,8 +1,6 @@
-
 class Tama < ActiveRecord::Base
-
+  has_one :levels
 	before_create :set_initial_levels
-
 
 	def time_passes days
 		self.food_level = self.food_level - (1 * days)
