@@ -1,10 +1,6 @@
 class Level < ActiveRecord::Base
   belongs_to :tamis
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 18899b9bd71fb5eca36f248dad9b617d3d011671
   def level_up
 
     if @@score >= 100
