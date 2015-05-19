@@ -1,5 +1,9 @@
 @@score = 0
 
+get('/') do
+  erb(:index)
+end
+
 get('/level/one') do
   erb(:level_one)
 end

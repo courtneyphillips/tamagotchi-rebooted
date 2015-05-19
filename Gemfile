@@ -1,3 +1,4 @@
+
 source("https://rubygems.org")
 
 gem("sinatra-contrib", :require => "sinatra/reloader")
@@ -6,10 +7,14 @@ gem("rake")
 gem("pg")
 gem("sinatra")
 
+group(:production) do
+  gem("sinatra")
+
 group(:test) do
   gem("rspec")
   gem("pry")
   gem("shoulda-matchers")
   gem("capybara")
   gem('shoulda-callback-matchers')
+  gem('launchy')
 end
