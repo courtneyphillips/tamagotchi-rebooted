@@ -3,31 +3,81 @@
   <div class="jumbotron">
     <div class="container">
     <h1>Level One</h1>
-    <h2 class="lead"><%= @tama.name %> is level one with a total score of <%= @@score %></h2>
+
+    <span class="text-muted">  <h2 class="lead"> NAME is level one with a total score of <%= @@score %></h2></span>
+
   </div>
 </div>
 
 <!-- TAMA IMAGE, ETC -->
 
-
+<div class="col-md-6">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">TAMA NAME </h3>
+      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> TAMA NAME </h3>
     </div>
     <div class="panel-body">
-      <span class="glyphicon glyphicon-user"></span>
+
+      <!-- REPLACE IMAGE LATER; OR HOST LOCALLY? -->
+
+      <img src="http://www.vtweb.com/backroom/tamagotchi/baby.gif">
     </div>
   </div>
+</div>
 
+
+<!-- PROGRESS BARS FOR TASK LEVELS - IN PANEL DIV -->
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">Current Levels</h4>
+    </div>
+    <div class="panel-body">
+
+  <!--  change to style="width: tequila_level , for example, in order to display levels of each required task (food, play, etc.) in status bar. -->
+
+  <span class="text-muted"><span class="glyphicon glyphicon-cutlery"></span>  Food</span>
+  <br>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">Food</span>
+        </div>
+      </div>
+      <span class="text-muted"><span class="glyphicon glyphicon-bed"></span>  Sleep </span>
+      <br>
+      <div class="progress">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <span class="sr-only">Tequila </span>
+        </div>
+      </div>
+
+      <span class="text-muted"><span class="glyphicon glyphicon-glass"></span>  Tequila </span>
+      <div class="progress">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+          <span class="sr-only">Other </span>
+        </div>
+      </div>
+      <span class="text-muted"> <span class="glyphicon glyphicon-send"></span>  Play </span>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+          <span class="sr-only">80% Complete (danger)</span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div><br><br>
 
 <!-- TOTAL SCORE - STACKED PROGRESS BAR - IN PANEL DISPLAY DIV -->
 
-
+<div class="col-md-12">
   <div class="panel panel-default">
     <div class="panel-heading">@tama.name  -  @tama.level  -  @tama.score</div>
     <div class="panel-body">
 
-
+      <span class="text-muted"><span class="glyphicon glyphicon-star"></span> Total Score </span>
       <div class="progress">
     <div class="progress-bar progress-bar-success" style="width:">
       <span class="sr-only">35% Complete (success)</span>
@@ -46,41 +96,6 @@
 
 
 
-<!-- PROGRESS BARS FOR TASK LEVELS - IN PANEL DIV -->
-
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Current Levels</h3>
-    </div>
-    <div class="panel-body">
-
-  <!--  change to style="width: tequila_level , for example, in order to display levels of each required task (food, play, etc.) in status bar. -->
-
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-          <span class="sr-only">Food <span class="glyphicon glyphicon-apple"></span></span>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-          <span class="sr-only">Tequila <span class="glyphicon glyphicon-filter"></span></span>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-          <span class="sr-only">Other </span>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-          <span class="sr-only">80% Complete (danger)</span>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
 
   <h1>Decision Time</h1>
 
