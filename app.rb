@@ -2,7 +2,6 @@ require('bundler/setup')
 Bundler.require(:default, :production)
 require('pry')
 
-
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 @@score = 0
@@ -44,4 +43,8 @@ post('/tama/new') do
   if new_tama.save
     redirect('/level/one')
   end
+end
+
+get('/tama/new') do
+  erb(:level_1)
 end
