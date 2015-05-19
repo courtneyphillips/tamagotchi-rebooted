@@ -4,17 +4,11 @@
 
 ## Synopsis
 
-PROJECT NAME built by [name1](https://github.com/username1).  Crafted as part of the Spring 2015 Ruby course curriculum at [Epicodus](https://www.epicodus.com/).
+Tamagotchi was built by [Chris Sefkin](https://github.com/c-sefkin), [Erin Collins](https://github.com/theerincollins), [Debbie Balbo](https://github.com/dbalbo) and [Courtney Phillips](https://github.com/courtneyphillips) as part of the Spring 2015 Ruby course curriculum at [Epicodus](https://www.epicodus.com/).
 
 ## Motivation
 
-Motivation for creating project. What it aims to solve/do/fix.
-
-## Code Example
-
-This cool `Class#method` does x, y, z.
-
-  ``here's an example of my code.to_s()``
+Tamagotchi was built as a cumulative exercise in the Ruby skills developed at Epicodus, including methods, class creation, SQL, ActiveRecord, Git
 
 ## Links
 
@@ -25,21 +19,24 @@ This cool `Class#method` does x, y, z.
 
 #### Gems
 
-PROJECT NAME uses the following gems:
+Tamagotchi uses the following gems:
 
+Development:
   - Capybara
   - Sinatra
+  - ActiveRecord
+
+Test:
   - RSpec
   - Pry
-  - ActiveRecord
-  - etcetera
-  - etcetera
+  - Shoulda-Matchers
+  - Shoulda-callback-matchers
 
-To install, run `$ gem install bundle` in the command line. Or whatever else you have to do.
+To install, run `$ gem install bundle` in the command line.
 
 #### Databases
 
-Additionally, PROJECT NAME utilizes databases via ActiveRecord. Should you clone this repository, simply do the following to establish and prepare similar databases for your own use:
+Additionally, Tamagotchi utilizes databases via ActiveRecord. Should you clone this repository, simply do the following to establish corresponding databases for your own use:
 
 1. Launch the Postgres server by running `$ postgres` in the terminal.
 2. Navigate to the project folder and run `$ rake db:create`.
@@ -47,7 +44,7 @@ Additionally, PROJECT NAME utilizes databases via ActiveRecord. Should you clone
 
 ## Tests
 
-Both method and integration tests for PROJECT NAME utilize the RSpec. Simply run `$ gem install rspec`, if it's not already installed, and then the command `rspec`, while located in the project's file.
+Method and integration tests for Tamagotchi utilize RSpec, Capybara, and Shoulda-Matchers. Simply run `$ gem install bundle`, as directed above, to download all necessary testing gems.
 
 ## Contribute
 
@@ -57,20 +54,16 @@ Both method and integration tests for PROJECT NAME utilize the RSpec. Simply run
 
 ## Development Roadmap
 
-PROJECT NAME is still a work in progress. The following are features, fixes and tweaks to be implemented as the project develops. Any additional suggestions can be contributed via the Issue Tracker above.
+Tamagotchi is still a work in progress. The following are features, fixes and tweaks to be implemented as the project develops. Any additional suggestions can be contributed via the Issue Tracker above.
 
-  - Blah
-  -
-
-## Contact
-
-Questions, grievances and hellos can be directed to CONTACT PERSON at <contact_person_email@g>.
+  - Utilization of JavaScript
+  - Other cool stuff
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 [NAMES]
+Copyright (c) 2015 [Chris Sefkin](https://github.com/c-sefkin), [Erin Collins](https://github.com/theerincollins), [Debbie Balbo](https://github.com/dbalbo) and [Courtney Phillips](https://github.com/courtneyphillips)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
