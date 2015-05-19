@@ -5,3 +5,12 @@ html {
 body {
   font-family: 'Press Start 2P', cursive;
 }
+
+.choice {
+  height: 300px;
+
+}
+
+.question {
+  display: inline-block;
+}

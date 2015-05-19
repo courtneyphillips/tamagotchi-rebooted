@@ -2,7 +2,6 @@ require('bundler/setup')
 Bundler.require(:default, :production)
 require('pry')
 
-
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 @@score = 0
@@ -16,24 +15,15 @@ get('/level/:id') do
   erb(:level_one)
 end
 
-post('/first/question') do
-  first_value = params.fetch("level_one")
+post('/question_one') do
+  @tama = params.fetch(tama_id).to_i
+  first_value = params.fetch("level_one").to_i
   @@score = @@score + first_value
   if @@score == 0
     erb(:dead)
   else
-    erb(:index)
+    redirect('/level/.concat()')
   end
-end
-
-post('/bully') do
-  @@score = @@score + first_value
-  erb(:dead)
-end
-
-post('/sandwich') do
-  @@score = @@score + first_value
-  redirect('level_two')
 end
 
 get('/create_tama') do
@@ -45,4 +35,8 @@ post('/tama/new') do
   if new_tama.save
     redirect('/level/'.concat(new_tama.id.to_s))
   end
+end
+
+get('/tama/new') do
+  erb(:level_1)
 end

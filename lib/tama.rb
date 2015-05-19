@@ -1,7 +1,8 @@
-
 class Tama < ActiveRecord::Base
   has_one :level
 
+
+  validates(:name, :presence => true)
 
 
 	def time_passes days
