@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150519215908) do
+=======
+ActiveRecord::Schema.define(version: 20150519213524) do
+>>>>>>> 18899b9bd71fb5eca36f248dad9b617d3d011671
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +24,19 @@ ActiveRecord::Schema.define(version: 20150519215908) do
     t.integer "level"
   end
 
+<<<<<<< HEAD
   create_table "tamas", force: :cascade do |t|
     t.integer "name"
     t.integer "food"
     t.integer "play"
     t.integer "sleep"
+=======
+  create_table "tamis", force: :cascade do |t|
+    t.string  "name"
+    t.integer "food_level"
+    t.integer "activity_level"
+    t.integer "sleep_level"
+>>>>>>> 18899b9bd71fb5eca36f248dad9b617d3d011671
     t.integer "level_id"
   end
 

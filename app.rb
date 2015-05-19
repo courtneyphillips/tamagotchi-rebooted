@@ -25,12 +25,23 @@ post('/first/question') do
   end
 end
 
-post('bully') do
+post('/bully') do
   @@score = @@score + first_value
   erb(:dead)
 end
 
-post('sandwich') do
+post('/sandwich') do
   @@score = @@score + first_value
   redirect('level_two')
+end
+
+get('/create_tama') do
+  erb(:tama_form)
+end
+
+post('/tama/new') do
+  new_tama = Tama.new(name: params.fetch("name"))
+  if new_tama.save
+    redirect('/level/one')
+  end
 end

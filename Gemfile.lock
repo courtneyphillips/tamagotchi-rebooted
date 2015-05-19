@@ -14,7 +14,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.8)
     arel (6.0.0)
     backports (3.6.4)
     builder (3.2.2)
@@ -28,8 +27,6 @@ GEM
     diff-lcs (1.2.5)
     i18n (0.7.0)
     json (1.8.2)
-    launchy (2.4.3)
-      addressable (~> 2.3)
     method_source (0.8.2)
     mime-types (2.5)
     mini_portile (0.6.2)
@@ -92,7 +89,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  launchy
   pg
   pry
   rake
