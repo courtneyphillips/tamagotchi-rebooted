@@ -44,3 +44,7 @@ post('/tama/new') do
     redirect('/level/one')
   end
 end
+
+get('/tama/new') do
+  erb(:level_1)
+end
