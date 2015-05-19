@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ENV['RACK_ENV'] = test
 
 require("bundler/setup")
@@ -19,9 +19,9 @@ RSpec.configure do |config|
       tama.destroy()
     end
 
-    # OTHERCLASS.all.each() do |OTHERCLASS|
-    #   OTHERCLASS.destroy()
-    # end
+    Level.all.each() do |level|
+      level.destroy()
+    end
 
 end
 end

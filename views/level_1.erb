@@ -80,3 +80,50 @@
 
     </div>
   </div>
+
+  <h1>Decision Time</h1>
+
+  <p class="question1">Some Kids are Being Punks on Playground</p>
+  <img scr="PUNK KIDS">
+
+  <form action="bully" method="post">
+    <input type="hidden" id="level_one" name="level_one" value=(-1*<%= @@score %>)>
+    <input type="image" name="submit" src="../public/img/bully.gif" border="0" alt="Submit">
+  </form>
+
+  <form action="sandwich" method="post">
+    <input type="hidden" id="level_one" name="level_one" value=100>
+    <input type="image" name="submit" src="../public/img/sandwich.jpg" border="0" alt="Submit">
+  </form>
+
+
+  <p class="question1">Some Kids are Being Punks on Playground</p>
+  <img scr="PUNK KIDS">
+
+  <form action="/first/question" method="post">
+    <label for="level_one">What are you going to do?</label>
+    <select name="level_one" id="level_one" type="text">
+      <option value = 100>Share a Sandwich</option>
+      <option value = (-1*<%= @@score %>)>Be A Punk Too</option>
+    </select>
+  </form>
+
+  <p class="question2">Congrats, You Just Graduated High School</p>
+  <img scr="GRADUATION">
+  <form action="/second/question" method="post">
+    <label for="level_one">What are you going to do?</label>
+    <select name="level_two" id="level_two" type="text">
+      <option value = 100>Become a Jugalo/</option>
+      <option value = (-1*<%= @@score %>)>Business School at Harvard!</option>
+      <option value = (-1*<%= @@score %>)>Be A Punk Too</option>
+    </select>
+  </form>
+
+
+  <p class="question1">Some Kids are Being Punks on Playground</p>
+  <img scr="PUNK KIDS">
+
+  <form action="bully" method="post">
+    <input type="hidden" id="level_one" name="level_one" value=100>
+    <input type="image" name="submit" src="../public/img/bully.gif" border="0" alt="Submit">
+  </form>

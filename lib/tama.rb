@@ -1,9 +1,7 @@
 
 class Tama < ActiveRecord::Base
-
+  has_one :levels
 	before_create :set_initial_levels
-
-  verifies :name, :presence => true
 
 
 	def time_passes days

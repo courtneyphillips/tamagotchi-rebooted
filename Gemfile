@@ -7,10 +7,15 @@ gem("rake")
 gem("pg")
 gem("sinatra")
 
+group(:production) do
+  gem("sinatra")
+end
+
 group(:test) do
   gem("rspec")
   gem("pry")
   gem("shoulda-matchers")
   gem("capybara")
   gem('shoulda-callback-matchers')
+  gem('launchy')
 end
