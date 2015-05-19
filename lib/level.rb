@@ -1,11 +1,24 @@
 class Level < ActiveRecord::Base
-  belongs_to :tamas
+  belongs_to :tamis
 
-  @@score = @tama.score
+  tami = Tami.find()
+  @@score = tami.score
+
 
   def level_up
+
     if @@score >= 100
-      tama.update(level: 1)
+      tami.update(level_id: 1)
+    end
+    
+    if @@score >= 200
+      tami.update(level_id: 2)
+    end
+
+    if @@score >= 300
+      tami.update(level_id: 3)
+    end
+
 
   end
 
