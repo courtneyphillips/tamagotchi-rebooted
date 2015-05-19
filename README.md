@@ -8,7 +8,7 @@ Tamagotchi was built by [Chris Sefkin](https://github.com/c-sefkin), [Erin Colli
 
 ## Motivation
 
-Tamagotchi was built as a cumulative exercise in the Ruby skills developed at Epicodus, including methods, class creation, SQL, ActiveRecord, Git
+Tamagotchi was built as a cumulative exercise of the skills in the Ruby unit at Epicodus, including methods, class creation, SQL, ActiveRecord, Git, Sinatra, HTML and CSS.
 
 ## Links
 
@@ -32,7 +32,7 @@ Test:
   - Shoulda-Matchers
   - Shoulda-callback-matchers
 
-To install, run `$ gem install bundle` in the command line.
+To install, simply run `$ gem install bundle` in the command line.
 
 #### Databases
 
