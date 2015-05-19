@@ -4,7 +4,7 @@
 
 ## Synopsis
 
-Tamagotchi built by [Chris Sefkin](https://github.com/c-sefkin), [Erin Collins](https://github.com/theerincollins), [Debbie Balbo](https://github.com/dbalbo) and [Courtney Phillips](https://github.com/courtneyphillips).  Crafted as part of the Spring 2015 Ruby course curriculum at [Epicodus](https://www.epicodus.com/).
+Tamagotchi was built by [Chris Sefkin](https://github.com/c-sefkin), [Erin Collins](https://github.com/theerincollins), [Debbie Balbo](https://github.com/dbalbo) and [Courtney Phillips](https://github.com/courtneyphillips) as part of the Spring 2015 Ruby course curriculum at [Epicodus](https://www.epicodus.com/).
 
 ## Motivation
 
