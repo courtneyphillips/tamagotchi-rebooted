@@ -1,6 +1,5 @@
 require('spec_helper')
 
-
 describe(Tama) do
 	describe('#initialize') do
 		it "creates a new tama with name and levels" do
@@ -24,5 +23,5 @@ end
 describe(Tama) do
 	it { should have_one (:level) }
 	it { should callback(:set_initial_levels).before(:create) }
-	it { should validate_presence_of(:name) }
+	it { should validate_presence_of(:level).on(:create) }
 end
