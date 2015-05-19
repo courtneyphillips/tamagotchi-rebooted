@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519192238) do
+ActiveRecord::Schema.define(version: 20150519213524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 20150519192238) do
   end
 
   create_table "tamis", force: :cascade do |t|
-    t.integer "name"
-    t.integer "food"
-    t.integer "play"
-    t.integer "sleep"
+    t.string  "name"
+    t.integer "food_level"
+    t.integer "activity_level"
+    t.integer "sleep_level"
     t.integer "level_id"
   end
 
