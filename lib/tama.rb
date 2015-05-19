@@ -1,7 +1,7 @@
 
 class Tama < ActiveRecord::Base
   has_one :level
-	before_create :set_initial_levels
+
 
 
 	def time_passes days

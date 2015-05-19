@@ -1,0 +1,48 @@
+<!-- HEADING -->
+
+  <div class="jumbotron">
+    <div class="container">
+    <h1>Level One</h1>
+    <h2 class="lead"><%= @tama.name %> is level one with a total score of <%= @@score %></h2>
+  </div>
+</div>
+
+<!-- TAMA IMAGE, ETC -->
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">TAMA NAME </h3>
+    </div>
+    <div class="panel-body">
+      <span class="glyphicon glyphicon-user"></span>
+    </div>
+  </div>
+
+
+<!-- TOTAL SCORE - STACKED PROGRESS BAR - IN PANEL DISPLAY DIV -->
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">@tama.name  -  @tama.level  -  @tama.score</div>
+    <div class="panel-body">
+
+
+      <div class="progress">
+    <div class="progress-bar progress-bar-success" style="width:">
+      <span class="sr-only">35% Complete (success)</span>
+    </div>
+    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+      <span class="sr-only">20% Complete (warning)</span>
+    </div>
+    <div class="progress-bar progress-bar-danger" style="width: 10%">
+      <span class="sr-only">10% Complete (danger)</span>
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+
+
+<!-- PROGRESS BARS FOR TASK LEVELS - IN PANEL DIV -->

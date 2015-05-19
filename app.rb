@@ -11,7 +11,8 @@ get('/') do
   erb(:index)
 end
 
-get('/level/one') do
+get('/level/:id') do
+  @tama = Tama.find(params.fetch("id").to_i)
   erb(:level_one)
 end
 
@@ -42,6 +43,6 @@ end
 post('/tama/new') do
   new_tama = Tama.new(name: params.fetch("name"))
   if new_tama.save
-    redirect('/level/one')
+    redirect('/level/'.concat(new_tama.id.to_s))
   end
 end
