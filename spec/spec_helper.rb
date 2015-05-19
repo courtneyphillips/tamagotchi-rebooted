@@ -1,5 +1,4 @@
-HEAD
-ENV['RACK_ENV'] = test
+ENV['RACK_ENV'] = 'test'
 
 require("bundler/setup")
 Bundler.require(:default, :test)
