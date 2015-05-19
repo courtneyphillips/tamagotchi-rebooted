@@ -10,28 +10,20 @@ get('/') do
   erb(:index)
 end
 
-get('/level/one') do
+get('/level/:id') do
+  @tama = Tama.find(params.fetch("id").to_i)
   erb(:level_one)
 end
 
-post('/first/question') do
-  first_value = params.fetch("level_one")
+post('/question_one') do
+  @tama = params.fetch(tama_id).to_i
+  first_value = params.fetch("level_one").to_i
   @@score = @@score + first_value
   if @@score == 0
     erb(:dead)
   else
-    erb(:index)
+    redirect('/level/.concat()')
   end
-end
-
-post('/bully') do
-  @@score = @@score + first_value
-  erb(:dead)
-end
-
-post('/sandwich') do
-  @@score = @@score + first_value
-  redirect('level_two')
 end
 
 get('/create_tama') do
@@ -41,7 +33,7 @@ end
 post('/tama/new') do
   new_tama = Tama.new(name: params.fetch("name"))
   if new_tama.save
-    redirect('/level/one')
+    redirect('/level/'.concat(new_tama.id.to_s))
   end
 end
 

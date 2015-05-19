@@ -1,7 +1,9 @@
 class Tama < ActiveRecord::Base
   has_one :level
-	before_create :set_initial_levels
+
+
   validates(:name, :presence => true)
+
 
   def birth_date
     "#{@birth_date.hour}:#{@birth_date.min}"
@@ -29,3 +31,4 @@ class Tama < ActiveRecord::Base
       @last_update = @birth_date
     end
   end
+>>>>>>> 009f0594a7370666cbd8e4377ed0d98f3b208620
