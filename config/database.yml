@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: tama_development
+
+test:
+  adapter: postgresql
+  database: tama_test
