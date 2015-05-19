@@ -15,8 +15,6 @@ class Level < ActiveRecord::Base
       tami.update(level_id: 3)
     end
 
-
   end
-
 
 end
