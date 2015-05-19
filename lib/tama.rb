@@ -2,6 +2,7 @@
 class Tama < ActiveRecord::Base
   has_one :level
 	before_create :set_initial_levels
+  validates(:name, :presence => true)
 
 
 	def time_passes days
