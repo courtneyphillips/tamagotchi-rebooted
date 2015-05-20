@@ -48,6 +48,12 @@ Method and integration tests for Tamagotchi utilize RSpec, Capybara, and Shoulda
 
 ## Contribute
 
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
   - Issue Tracker: https://github.com/username/PROJECTNAME/issues
   - Source Code: https://github.com/username/PROJECTNAME
   - Pull Requests: https://github.com/username/PROJECTNAME/pulls
