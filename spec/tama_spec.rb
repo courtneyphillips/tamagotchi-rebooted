@@ -23,5 +23,5 @@ end
 describe(Tama) do
 	it { should have_one (:level) }
 	it { should callback(:set_initial_levels).before(:create) }
-	it { should validate_presence_of(:level).on(:create) }
+
 end
