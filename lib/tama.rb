@@ -31,4 +31,3 @@ class Tama < ActiveRecord::Base
       @last_update = @birth_date
     end
   end
->>>>>>> 009f0594a7370666cbd8e4377ed0d98f3b208620
