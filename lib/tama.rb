@@ -1,5 +1,7 @@
 class Tama < ActiveRecord::Base
-  has_one :level
+  belongs_to :level
+  before_create :set_initial_levels
+
 
 
   validates(:name, :presence => true)
@@ -9,11 +11,19 @@ class Tama < ActiveRecord::Base
     "#{@birth_date.hour}:#{@birth_date.min}"
   end
 
-  def update_pet
-    current_time = Time.new()
-    time_elapsed = current_time - @last_update
-    @last_update = current_time
+  def start_update
+    if self.food_level > 0 && self.activity_level > 0 && self.sleep_level > 0  && self.drink_level > 0
+      self.update(food_level: (self.food_level-1))
+      self.update(activity_level: (self.activity_level-7))
+      self.update(sleep_level: (self.sleep_level-3))
+      self.update(drink_level: (self.drink_level-10))
+    else
+      @@score = 0
+    end
+
   end
+
+
 
 
   def age
@@ -22,13 +32,22 @@ class Tama < ActiveRecord::Base
   end
 
 
-  private
+
     def set_initial_levels
-      self.food_level = 11
-      self.activity_level = 11
-      self.sleep_level = 11
+      self.food_level = 100
+      self.activity_level = 100
+      self.sleep_level = 100
+      self.drink_level = 100
       @birth_date = Time.new()
       @last_update = @birth_date
+      self.level_id = 1
+      @@score = 1
     end
   end
->>>>>>> 009f0594a7370666cbd8e4377ed0d98f3b208620
+
+def is_alive?
+		food = food_level > 0
+		sleep = sleep_level > 0
+		activity = sctivity_level > 0
+		food && sleep && activity
+end

@@ -1,5 +1,8 @@
 class Level < ActiveRecord::Base
-  belongs_to :tamas
+
+  has_one :tama
+
+
 
   def level_up
 
