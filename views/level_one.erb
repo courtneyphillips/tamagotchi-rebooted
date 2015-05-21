@@ -1,38 +1,29 @@
-<!-- HEADING -->
+
+
 <head>
 <meta http-equiv="refresh" content="20">
 
 </head>
+<!-- HEADING -->
 
-  <div class="jumbotron">
+<div class="jumbotron row">
+  <div class="col-sm-12">
     <div class="container">
-    <h1>Level One</h1>
+      <div class="row"
 
-    <span class="text-muted">  <h2 class="lead"> <%= @tama.name %> is level one with a total score of <%= @@score %></h2></span>
-
+          <h1 style="font-size: 50px" class="level-header">Level One</h1>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
 
 <!-- TAMA IMAGE, ETC -->
-
-<div class="col-md-6">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> TAMA NAME </h3>
-    </div>
-    <div class="panel-body">
-
-      <!-- REPLACE IMAGE LATER; OR HOST LOCALLY? -->
-
-      <img src="http://www.vtweb.com/backroom/tamagotchi/baby.gif">
-    </div>
-  </div>
-</div>
-
+<div class="container">
 
 <!-- PROGRESS BARS FOR TASK LEVELS - IN PANEL DIV -->
-
-<div class="col-md-6">
+<div class="row">
+<div class="col-sm-8">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">Current Levels</h4>
@@ -41,72 +32,102 @@
 
   <!--  change to style="width: tequila_level , for example, in order to display levels of each required task (food, play, etc.) in status bar. -->
 
-  <span class="text-muted"><span class="glyphicon glyphicon-cutlery"></span>  Food</span>
-  <br>
+
+    <div class= "col-sm-8">
+      <span class="text-muted"><span class="glyphicon glyphicon-cutlery"></span>  Food</span>
+      <br>
       <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%= @tama.food_level %>%">
           <span class="sr-only">Food</span>
         </div>
       </div>
+    </div>
 
-      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
-        <button type="submit" class="btn btn-success">Feed <%= @tama.name %></button>
+        <div class="col-sm-4">
+        <button type="submit" class="update-btn btn btn-success">Feed</button>
+      </div>
     </form>
 
-      <span class="text-muted"><span class="glyphicon glyphicon-bed"></span>  Sleep </span>
-      <br>
+
+      <div class="col-sm-8">
+        <span class="text-muted"><span class="glyphicon glyphicon-bed"></span>  Sleep </span>
+        <br>
       <div class="progress">
         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <%= @tama.sleep_level %>%">
           <span class="sr-only">Tequila </span>
         </div>
       </div>
+    </div>
 
-      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
-
-        <button type="submit" class="btn btn-success">Nap <%= @tama.name %></button>
+        <div class="col-sm-4">
+        <button type="submit" class="update-btn btn btn-success">Nap </button>
+      </div>
     </form>
 
-      <span class="text-muted"><span class="glyphicon glyphicon-glass"></span>  Tequila </span>
-      <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= @tama.drink_level %>%">
-          <span class="sr-only">Other </span>
+
+      <div class="col-sm-8">
+        <span class="text-muted"><span class="glyphicon glyphicon-glass"></span>  Tequila </span>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= @tama.drink_level %>%">
+            <span class="sr-only">Other </span>
+          </div>
         </div>
       </div>
 
-      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
+        <div class="col-sm-4">
+          <button type="submit" class="update-btn btn btn-success">Take Shots </button>
+      </div>
+  </form>
 
-        <button type="submit" class="btn btn-success">Take Shots With <%= @tama.name %></button>
-    </form>
 
-      <span class="text-muted"> <span class="glyphicon glyphicon-send"></span>  Play </span>
+      <div class="col-sm-8">
+        <span class="text-muted"> <span class="glyphicon glyphicon-send"></span>  Play </span>
       <div class="progress">
         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <%= @tama.activity_level %>%">
           <span class="sr-only">80% Complete (danger)</span>
         </div>
       </div>
+    </div>
 
-      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
-
-        <button type="submit" class="btn btn-success">Exercise <%= @tama.name %></button>
+<div class="col-sm-4">
+        <button type="submit" class="update-btn btn btn-success">Exercise</button>
+    </div>
     </form>
 
     </div>
   </div>
-</div><br><br>
+</div>
 
+<div class="col-sm-4">
+<div style="display: inline-block" class="tama-vid panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> <%= @tama.name %>   &nbsp Score:<%= @@score %> </h3>
+  </div>
+  <div class="panel-body">
+    <img class="baby-tama" src="http://www.vtweb.com/backroom/tamagotchi/baby.gif">
+  </div>
+</div>
+</div>
+</div>
+</div>
 
-  <h1>Decision Time</h1>
+<div class="container">
+  <h1 class="text-center">Challenge 1</h1>
 
-  <p class="question1">Some Kids are Being Punks on Playground</p>
+  <p class="question1">Some Kids are Being Punks on the Playground. Share a Sandwich or Be A Punk?</p>
   <img scr="PUNK KIDS">
 
 <div class="row question">
@@ -123,5 +144,6 @@
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
     <input type="image" class = "choice" name="submit" src="/img/sandwich.jpg" border="0" alt="Submit">
   </form>
+</div>
 </div>
 </div>
