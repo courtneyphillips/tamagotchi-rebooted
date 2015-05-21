@@ -8,6 +8,7 @@ gem("pg")
 gem("javan-whenever")
 gem('daemons')
 gem 'rerun'
+gem 'yeah'
 
 group(:production) do
   gem("sinatra")
