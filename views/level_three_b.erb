@@ -1,38 +1,41 @@
-<!-- HEADING -->
+
+
 <head>
 <meta http-equiv="refresh" content="20">
 
 </head>
+<p>
 
-  <div class="jumbotron">
+<!-- HEADING -->
+
+<div class="jumbotron row">
+  <div class="col-sm-12">
     <div class="container">
-    <h1>Level One</h1>
+      <div class="row"
 
-    <span class="text-muted">  <h2 class="lead"> <%= @tama.name %> is level one with a total score of <%= @@score %></h2></span>
-
+          <h1 style="font-size: 40px" class="level-header">Level Three</h1>
+          <div style="display: inline-block" class="tama-vid panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> <%= @tama.name %> <%= @@score %> </h3>
+            </div>
+            <div class="panel-body">
+              <img src="http://www.vtweb.com/backroom/tamagotchi/baby.gif">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
 
 <!-- TAMA IMAGE, ETC -->
-
-<div class="col-md-6">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> TAMA NAME </h3>
-    </div>
-    <div class="panel-body">
-
-      <!-- REPLACE IMAGE LATER; OR HOST LOCALLY? -->
-
-      <img src="http://www.vtweb.com/backroom/tamagotchi/baby.gif">
-    </div>
-  </div>
-</div>
+<div class="container">
+<div class="row">
 
 
 <!-- PROGRESS BARS FOR TASK LEVELS - IN PANEL DIV -->
 
-<div class="col-md-6">
+<div class="col-sm-12">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">Current Levels</h4>
@@ -49,7 +52,7 @@
         </div>
       </div>
 
-      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -64,7 +67,7 @@
         </div>
       </div>
 
-      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -78,7 +81,7 @@
         </div>
       </div>
 
-      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -92,7 +95,7 @@
         </div>
       </div>
 
-      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -101,27 +104,34 @@
 
     </div>
   </div>
-</div><br><br>
+</div>
 
 
   <h1>Decision Time</h1>
 
-  <p class="question1">Some Kids are Being Punks on Playground</p>
-  <img scr="PUNK KIDS">
+  <p class="question1">You Sold Meth to Children and One of Them Just Became President. She Wants to Thank You! How Will You Get To DC?</p>
 
 <div class="row question">
-  <div class="col-sm-6">
-  <form action="/question_one" method="post">
+  <div class="col-sm-4">
+  <form action="/question_three" method="post">
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
-    <input type="hidden" id="level_one" name="level_one" value="-1*<%=@@score %>">
-    <input type="image" class = "choice" name="submit" src="/img/bully.gif" border="0" alt="Submit">
+    <input type="hidden" id="level_three" name="level_three" value="-<%=@@score %>">
+    <input type="image" class = "choice3" name="submit" src="/img/plane.jpg" border="0" alt="Submit">
   </form>
 </div>
-<div class="col-sm-6">
-  <form action="/question_one" method="post">
-    <input type="hidden" id="level_one" name="level_one" value=100>
+<div class="col-sm-4">
+  <form action="/question_three" method="post">
+    <input type="hidden" id="level_three" name="level_three" value=100>
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
-    <input type="image" class = "choice" name="submit" src="/img/sandwich.jpg" border="0" alt="Submit">
+    <input type="image" class = "choice3" name="submit" src="/img/hitchhiker.jpg" border="0" alt="Submit">
+  </form>
+</div>
+
+<div class="col-sm-4">
+  <form action="/question_three" method="post">
+    <input type="hidden" id="level_three" name="level_three" value=50>
+    <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
+    <input type="image" class = "choice3" name="submit" src="/img/train.jpg" border="0" alt="Submit">
   </form>
 </div>
 </div>

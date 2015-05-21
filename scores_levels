@@ -1,1 +1,5 @@
 score 100 -> level1
+
+score 200 -> level2 prompt1
+score 250 -> level2 prompt2
+score 0 -> dead

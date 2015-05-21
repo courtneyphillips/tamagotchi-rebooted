@@ -1,24 +1,26 @@
-<!-- HEADING -->
+
+
 <head>
 <meta http-equiv="refresh" content="20">
 
 </head>
+<p>
+
+<!-- HEADING -->
 
   <div class="jumbotron">
     <div class="container">
-    <h1>Level One</h1>
-
-    <span class="text-muted">  <h2 class="lead"> <%= @tama.name %> is level one with a total score of <%= @@score %></h2></span>
-
+    <h1>Level Two</h1>
   </div>
 </div>
 
 <!-- TAMA IMAGE, ETC -->
-
-<div class="col-md-6">
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> TAMA NAME </h3>
+      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> <%= @tama.name %> Score: <%= @@score %>  </h3>
     </div>
     <div class="panel-body">
 
@@ -32,7 +34,7 @@
 
 <!-- PROGRESS BARS FOR TASK LEVELS - IN PANEL DIV -->
 
-<div class="col-md-6">
+<div class="col-sm-8">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">Current Levels</h4>
@@ -49,7 +51,7 @@
         </div>
       </div>
 
-      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>a' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -64,7 +66,7 @@
         </div>
       </div>
 
-      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>a' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -78,7 +80,7 @@
         </div>
       </div>
 
-      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>a' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -92,7 +94,7 @@
         </div>
       </div>
 
-      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
+      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>a' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -101,27 +103,35 @@
 
     </div>
   </div>
-</div><br><br>
+</div>
 
 
   <h1>Decision Time</h1>
 
-  <p class="question1">Some Kids are Being Punks on Playground</p>
-  <img scr="PUNK KIDS">
+  <p class="question1">You Just Graduated From High School. What Will You Do Next?</p>
 
 <div class="row question">
-  <div class="col-sm-6">
-  <form action="/question_one" method="post">
+  <div class="col-sm-4">
+  <form action="/question_two" method="post">
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
-    <input type="hidden" id="level_one" name="level_one" value="-1*<%=@@score %>">
-    <input type="image" class = "choice" name="submit" src="/img/bully.gif" border="0" alt="Submit">
+    <input type="hidden" id="level_two" name="level_two" value=(-1*<%= @@score %>)>
+    <input type="image" class = "choice3" name="submit" src="/img/college.jpg" border="0" alt="Submit">
   </form>
 </div>
-<div class="col-sm-6">
-  <form action="/question_one" method="post">
-    <input type="hidden" id="level_one" name="level_one" value=100>
+
+<div class="col-sm-4">
+  <form action="/question_two" method="post">
+    <input type="hidden" id="level_two" name="level_two" value=100>
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
-    <input type="image" class = "choice" name="submit" src="/img/sandwich.jpg" border="0" alt="Submit">
+    <input type="image" class = "choice3" name="submit" src="/img/juggalo.jpg" border="0" alt="Submit">
+  </form>
+</div>
+
+<div class="col-sm-4">
+  <form action="/question_two" method="post">
+    <input type="hidden" id="level_two" name="level_two" value=50>
+    <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
+    <input type="image" class = "choice3" name="submit" src="/img/meth.jpg" border="0" alt="Submit">
   </form>
 </div>
 </div>

@@ -14,16 +14,25 @@ describe(Tama) do
 
 
 
-	describe('#start_update') do
+	describe('.start_update') do
 		it 'decreases the amount of food, drink, activity, sleep the tama has left by 1' do
-			my_tama =Tama.create(name: 'Pat')
-			my_tama.start_update()
+			my_tama1 =Tama.create(name: 'Pat')
+			sleep(15)
+			my_tama = Tama.find(my_tama1.id)
 			expect(my_tama.food_level).to(eq(99))
 			expect(my_tama.activity_level).to(eq(93))
 			expect(my_tama.drink_level).to(eq(90))
 			expect(my_tama.sleep_level).to(eq(97))
 		end
 	end
+
+		 describe('#feed') do
+		 	it 'increases the tama food level' do
+		 		my_tama = Tama.create(:name => "Billy")
+		 		my_tama.feed
+		 		expect(my_tama.food_level).to(eq(115))
+		 	end
+		 end
 end
 #
 # 	describe('#is_alive?') do
@@ -39,13 +48,7 @@ end
 # 		expect(my_tama.is_alive?).to(eq(false))
 # 		end
 #
-# 	 describe('#feed') do
-# 	 	it 'increases the tama food level' do
-# 	 		my_tama = Tama.create(:name => "Billy")
-# 	 		my_tama.feed
-# 	 		expect(my_tama.food_level).to(eq(115))
-# 	 	end
-# 	 end
+
 #
 # 	 describe('#level') do
 # 	 	it 'returns level' do
