@@ -11,14 +11,11 @@ class Tama < ActiveRecord::Base
     "#{@birth_date.hour}:#{@birth_date.min}"
   end
 
-  def self.start_update
-    all_tamas = Tama.all
-    all_tamas.each do |tama|
-      tama.update(food_level: (tama.food_level-1))
-      tama.update(activity_level: (tama.activity_level-1))
-      tama.update(sleep_level: (tama.sleep_level-1))
-      tama.update(drink_level: (tama.drink_level-1))
-    end
+  def start_update
+      self.update(food_level: (self.food_level-0))
+      self.update(activity_level: (self.activity_level-0))
+      self.update(sleep_level: (self.sleep_level-0))
+      self.update(drink_level: (self.drink_level-0))
   end
 
 
