@@ -14,10 +14,11 @@ describe(Tama) do
 
 
 
-	describe('#start_update') do
+	describe('.start_update') do
 		it 'decreases the amount of food, drink, activity, sleep the tama has left by 1' do
-			my_tama =Tama.create(name: 'Pat')
-			my_tama.start_update()
+			my_tama1 =Tama.create(name: 'Pat')
+			sleep(15)
+			my_tama = Tama.find(my_tama1.id)
 			expect(my_tama.food_level).to(eq(99))
 			expect(my_tama.activity_level).to(eq(93))
 			expect(my_tama.drink_level).to(eq(90))

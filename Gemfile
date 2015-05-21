@@ -5,6 +5,9 @@ gem("sinatra-contrib", :require => "sinatra/reloader")
 gem("sinatra-activerecord")
 gem("rake")
 gem("pg")
+gem("javan-whenever")
+gem('daemons')
+gem 'rerun'
 
 group(:production) do
   gem("sinatra")

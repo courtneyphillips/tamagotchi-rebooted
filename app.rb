@@ -6,7 +6,7 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 
 get('/') do
-  @@score = 0
+  @@score = 1
   erb(:index)
 end
 
@@ -15,9 +15,10 @@ get('/dead') do
 end
 
 get('/level/:id/1') do
+  @@score
   @tama = Tama.find(params.fetch("id").to_i)
   if @tama.food_level > 0 && @tama.activity_level > 0 && @tama.sleep_level > 0  && @tama.drink_level > 0
-    @tama.start_update
+    @tama = Tama.find(params.fetch("id").to_i)
     erb(:level_one)
   else
     @@score = 0

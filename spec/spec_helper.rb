@@ -9,6 +9,7 @@ require('capybara/rspec')
 Capybara.app = Sinatra::Application
 #set(:show_exceptions, false)
 require("./app")
+require("./sleeper")
 
 Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each { |file| require file }
 
