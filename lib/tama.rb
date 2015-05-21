@@ -13,10 +13,10 @@ class Tama < ActiveRecord::Base
 
   def start_update
     if self.food_level > 0 && self.activity_level > 0 && self.sleep_level > 0  && self.drink_level > 0
-      self.update(food_level: (self.food_level-1))
-      self.update(activity_level: (self.activity_level-7))
-      self.update(sleep_level: (self.sleep_level-3))
-      self.update(drink_level: (self.drink_level-10))
+      self.update(food_level: (self.food_level-0))
+      self.update(activity_level: (self.activity_level-0))
+      self.update(sleep_level: (self.sleep_level-0))
+      self.update(drink_level: (self.drink_level-0))
     else
       @@score = 0
     end

@@ -24,6 +24,14 @@ describe(Tama) do
 			expect(my_tama.sleep_level).to(eq(97))
 		end
 	end
+
+		 describe('#feed') do
+		 	it 'increases the tama food level' do
+		 		my_tama = Tama.create(:name => "Billy")
+		 		my_tama.feed
+		 		expect(my_tama.food_level).to(eq(115))
+		 	end
+		 end
 end
 #
 # 	describe('#is_alive?') do
@@ -39,13 +47,7 @@ end
 # 		expect(my_tama.is_alive?).to(eq(false))
 # 		end
 #
-# 	 describe('#feed') do
-# 	 	it 'increases the tama food level' do
-# 	 		my_tama = Tama.create(:name => "Billy")
-# 	 		my_tama.feed
-# 	 		expect(my_tama.food_level).to(eq(115))
-# 	 	end
-# 	 end
+
 #
 # 	 describe('#level') do
 # 	 	it 'returns level' do

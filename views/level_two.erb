@@ -2,9 +2,9 @@
 
   <div class="jumbotron">
     <div class="container">
-    <h1>Level One</h1>
+    <h1>Level Two</h1>
 
-    <span class="text-muted">  <h2 class="lead"> <%= @tama.name %> is level one with a total score of <%= @@score %></h2></span>
+    <span class="text-muted">  <h2 class="lead"> <%= @tama.name %> is level two with a total score of <%= @@score %></h2></span>
 
   </div>
 </div>
@@ -14,7 +14,7 @@
 <div class="col-md-6">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> TAMA NAME </h3>
+      <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> <%= @tama.name %>  </h3>
     </div>
     <div class="panel-body">
 
@@ -102,22 +102,29 @@
 
   <h1>Decision Time</h1>
 
-  <p class="question1">Some Kids are Being Punks on Playground</p>
-  <img scr="PUNK KIDS">
+  <p class="question1">You Just Graduated From High School. What Will You Do Next?</p>
 
 <div class="row question">
   <div class="col-sm-6">
-  <form action="/question_one" method="post">
+  <form action="/question_two" method="post">
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
-    <input type="hidden" id="level_one" name="level_one" value="-1*l<%=@@score %>">
-    <input type="image" class = "choice" name="submit" src="/img/bully.gif" border="0" alt="Submit">
+    <input type="hidden" id="level_two" name="level_two" value=(-1*<%= @@score %>)>
+    <input type="image" class = "choice" name="submit" src="/img/college.jpg" border="0" alt="Submit">
   </form>
 </div>
 <div class="col-sm-6">
-  <form action="/question_one" method="post">
-    <input type="hidden" id="level_one" name="level_one" value=100>
+  <form action="/question_two" method="post">
+    <input type="hidden" id="level_two" name="level_two" value=100>
     <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
-    <input type="image" class = "choice" name="submit" src="/img/sandwich.jpg" border="0" alt="Submit">
+    <input type="image" class = "choice" name="submit" src="/img/juggalo.jpg" border="0" alt="Submit">
+  </form>
+</div>
+
+<div class="col-sm-6">
+  <form action="/question_two" method="post">
+    <input type="hidden" id="level_two" name="level_two" value=50>
+    <input type="hidden" id="tama_id" name="tama_id" value= <%= @tama.id %>>
+    <input type="image" class = "choice" name="submit" src="/img/meth.jpg" border="0" alt="Submit">
   </form>
 </div>
 </div>
