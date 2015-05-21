@@ -25,6 +25,12 @@ body {
   width: 300px;
 }
 
+.death {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .juggalo-vid {
   display: block;
   margin-left: auto;
@@ -94,4 +100,10 @@ body {
   min-width: 100%;
   height: 100%;
   color: purple;
+}
+
+.home-button, .money-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

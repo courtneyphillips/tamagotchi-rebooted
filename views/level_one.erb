@@ -43,7 +43,7 @@
       </div>
     </div>
 
-      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
+      <form action='/feed/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
+      <form action='/sleep/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
         <div class="col-sm-4">
@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
+      <form action='/drink/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
         <div class="col-sm-4">
@@ -99,7 +99,7 @@
       </div>
     </div>
 
-      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>b' method="post">
+      <form action='/activity/<%= @tama.id %>/<%= @tama.level_id %>' method="post">
         <input type="hidden" name="_method" value="patch">
         <input type="hidden" name="tama_id" value= "<%= @tama.id %>">
 <div class="col-sm-4">
