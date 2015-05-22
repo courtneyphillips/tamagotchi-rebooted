@@ -102,7 +102,11 @@ body {
   color: purple;
 }
 
-.home-button, .money-title {
+.create-life {
+  font-size: 80px;
+}
+
+.home-button, .money-title, .tama-form {
   display: block;
   margin-left: auto;
   margin-right: auto;
