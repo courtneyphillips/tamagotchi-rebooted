@@ -16,7 +16,7 @@ Tamagotchi was built as a cumulative exercise of the skills in the Ruby unit at 
 
 Tamagotchi uses the following gems:
 
-Development:
+*Development:*
   - Capybara
   - Sinatra
   - ActiveRecord
@@ -24,7 +24,7 @@ Development:
   - Daemons
   - Rerun
 
-Test:
+*Test:*
   - RSpec
   - Pry
   - Shoulda-Matchers
