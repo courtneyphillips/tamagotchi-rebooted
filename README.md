@@ -8,12 +8,7 @@ Tamagotchi was built by [Chris Sefkin](https://github.com/c-sefkin), [Erin Colli
 
 ## Motivation
 
-Tamagotchi was built as a cumulative exercise of the skills in the Ruby unit at Epicodus, including methods, class creation, SQL, ActiveRecord, Git, Sinatra, HTML and CSS.
-
-## Links
-
-  - Heroku: www.samplelinkhere.com
-  - GitHub: www.samplelinkhere.com
+Tamagotchi was built as a cumulative exercise of the skills in the Ruby unit at Epicodus, including methods, class creation, SQL, ActiveRecord, Git, Sinatra, HTML and Responsive CSS Design.
 
 ## Installation
 
@@ -21,16 +16,19 @@ Tamagotchi was built as a cumulative exercise of the skills in the Ruby unit at 
 
 Tamagotchi uses the following gems:
 
-Development:
+_Development:_
   - Capybara
   - Sinatra
   - ActiveRecord
+  - Javan-Whenever
+  - Daemons
 
-Test:
+_Test:_
   - RSpec
   - Pry
   - Shoulda-Matchers
   - Shoulda-callback-matchers
+  - Launchy
 
 To install, simply run `$ gem install bundle` in the command line.
 
@@ -62,8 +60,14 @@ Method and integration tests for Tamagotchi utilize RSpec, Capybara, and Shoulda
 
 Tamagotchi is still a work in progress. The following are features, fixes and tweaks to be implemented as the project develops. Any additional suggestions can be contributed via the Issue Tracker above.
 
-  - Utilization of JavaScript
-  - Other cool stuff
+  - Redesign of minigames to allow in-browser play that effects outcome of Tamagotchi lives.
+  - Implementation of Javascript.
+  - Longer/larger story tree; more outcomes.
+  - Additional minigames.
+
+## Original Soundtrack
+
+  Custom soundtrack for minigames and more composed by [Debbie Balbo](https://github.com/dbalbo).
 
 ## License
 
