@@ -22,7 +22,6 @@ _Development:_
   - ActiveRecord
   - Javan-Whenever
   - Daemons
-  - Rerun
 
 _Test:_
   - RSpec
